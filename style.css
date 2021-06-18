@@ -7,15 +7,33 @@
     text-decoration: none;
     scroll-behavior: smooth;
 }
+html{
+    scroll-behavior: smooth;
+}
 .max-width{
     max-width: 1920px;
     padding: 0 80px;
     margin: auto;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none; 
-  }
+  } */
+
+  ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -32,7 +50,7 @@ padding: 100px 0;
     font-family: 'poppins', sans-serif;
 }
 .about .about-content,
-.Services .serv-content,
+/* .Services .serv-content, */
 .skills .skills-content,
 .contact .contact-content{
 display: flex;
@@ -126,6 +144,7 @@ justify-content: space-between;
     display: inline-block;
 }
 .navbar .menu li a{
+    display: block;
     color:#00f053;
     font-size: 18px;
     font-weight: 500;
@@ -163,13 +182,14 @@ justify-content: space-between;
     width: 42px;
     background: crimson;
     right: 30px;
-    bottom: 30px;
+    bottom: 10px;
     text-align: center;
     line-height: 45px;
     color: #fff;
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
+    border-bottom-width: 2px;
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
@@ -179,8 +199,11 @@ justify-content: space-between;
     bottom: 30px;
     opacity: 1;
     pointer-events: auto;
-
 }
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -235,7 +258,25 @@ justify-content: space-between;
     color: #fff;
     background: #00f053;
 }
-
+.social{
+    margin: 20px 0;
+}
+.social a{
+    z-index: 9999;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    transition: 0.4s;
+    border-radius: 50%
+}
+.social a:hover{
+    background: #00f053;
+    color: white;
+}
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -314,6 +355,12 @@ justify-content: space-between;
     color: #fff;
     background: #111;
 }
+.Services .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 .Services .title::before,
 .works .title::before{
     background: #fff;
@@ -324,7 +371,7 @@ justify-content: space-between;
     content: "What i provide";
 }
 .Services .serv-content .card{
-    width: calc(33% - 20px);
+    width: calc(25% - 10px);
     background: #222;
     text-align: center;
     border-radius: 6px;
@@ -350,7 +397,7 @@ justify-content: space-between;
     color: #fff;
 }
 .Services .serv-content .card .text{
-    font-size: 25px;
+    font-size: 17.9px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
@@ -481,7 +528,7 @@ justify-content: space-between;
     transform: scale(1.05);
 }
 .works .carousel .card .text{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
@@ -585,6 +632,13 @@ justify-content: space-between;
 .contact .contact-content .info .sub-title{
     color: #333;
 }
+.contact .contact-content .info .sub-title a:hover{
+    color: red; 
+}
+.contact .contact-content .info .sub-title a{
+    color: #333;
+    font-weight: 500;   
+}
 .contact .right form .fields{
     display: flex;
 }
@@ -640,6 +694,42 @@ justify-content: space-between;
     color: crimson;
     background: none;
 }
+.sociald{
+    margin: 20px 0;
+}
+.sociald a{
+    z-index: 9999;
+    display:inline-flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: crimson;
+    font-size: 30px;
+    transition: 0.4s;
+    border-radius: 50%
+}
+.sociald a:hover{
+    background: crimson;
+    color: white;
+}
+
+.vline{
+    border-bottom: 2px solid rgb(26, 26, 26);
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -769,7 +859,7 @@ footer span a:hover{
         flex: 100%;
     }
     .Services .serv-content .card{
-        width: calc(50% - 10%);
+        width: calc(58.7% - 10%);
         margin-bottom: 20px;
     }
     .skills .skills-content .column,
@@ -827,6 +917,31 @@ footer span a:hover{
         font-size: 30px;
         font-weight: 500;
     }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+    section .title::after{
+        font-size: 17px;
+    }
     
     
 }
@@ -865,7 +980,7 @@ footer span a:hover{
     }
     .Services .title::after{
         height: 19px;
-        width: 140px;
+        width: 110px;
     }
     section .title::after{
         font-size: 15px;
