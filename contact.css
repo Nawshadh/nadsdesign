@@ -174,7 +174,7 @@ justify-content: space-between;
 }
 
 .navbar .menu li a:hover{
-    color: #fff
+    color: #008ab4
 }
 .navbar.sticky .menu li a{
     color: #fff;
