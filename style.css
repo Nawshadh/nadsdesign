@@ -62,7 +62,7 @@ html{
     width:100%;
     height:100vh;
     background:#111;
-    overflow:auto;
+    overflow:unset;
     position:fixed;
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   }
