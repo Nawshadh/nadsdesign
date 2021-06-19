@@ -14,9 +14,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script src="pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    
     
 </head>
 <body>
+ <!-- loader section  -->
+
+    <div id="preloader">
+        <div class="p">LOADING</div>
+    </div>
+
+    <!-- <div class="loader-container">
+        <div class="loader"></div>
+    </div> -->
+
     <div class="scroll-up-btn">
         <i class="fa fa-angle-up"></i>
     </div>
@@ -39,7 +53,7 @@
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#Services" class="menu-btn">Services</a></li>
                 <li><a href="#Skills" class="menu-btn">Skills</a></li>
-                <li><a href="#works" class="menu-btn">Works</a></li>
+                <li><a href="gallery.html" class="menu-btn">Works</a></li>
                 <li><a href="contact.html" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
@@ -83,7 +97,7 @@
                 <div class="text">I'm Nawshadh and I'm a <span class="typing2"></span></div>
                 <p>Professional Graphic Designer and also a Video editor currently living in Kanyakumari. I live in a world of infinite possibilities, preferring to see things not as they are but as they could be... I'm a problem solver with a keen interest in contributing to society through design.</p>
                 <!-- <p>I am a Designer and  also a Video editor. If you have any Project or if you want make a design for your bussines conatact me. I make as soon as possibale.You really like my work, if you don't i change this until you like I give you seticfaction result</p> -->
-                <a href="mailto:nawshadh1551@gmail.com">Hire me</a>
+                <a href="contact.html">Hire me</a>
             </div>
         </div>
     </section>
@@ -137,7 +151,7 @@
                     <div class="column left">
                         <div class="text">My creative skills & experience.</div>
                         <p>Hi! I am a Graphic /Web Designer and also a Video editor  based in Kanyakumari, India. I completed my ug in BBA and i started designing. I have 2+ year's experience in designing field<br>P.S. If this wasn't enough for you no worries! you can also find out more ABOUT ME here ;) </p>
-                        <a href="#">Read More</a>
+                        <a href="#home">Read More</a>
                     </div>
                     
                     <div class="column right">
@@ -247,74 +261,9 @@
                 </div>
             </div> 
         </div>
-        <a href="#">Read More</a>  
+        <a href="gallery.html">View More</a>  
     </section>
 
-<!-- contact section starts -->    
-    <!-- <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                   
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fa fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Nawshadh </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fa fa-map-marker"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">thuckalay,TamilNadu,India.</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fa fa-at"></i>
-                            <div class="info">
-                                <div class="head">E-mail</div>
-                                <div class="sub-title"><a href="mailto:nawshadh1551@gmail.com">nawshadh1551@gmail.com</a> </div>
-                            </div>
-                        </div>
-                        <div class="sociald">
-                            <a href="https://www.facebook.com/nawshadh.nadheem" target="_blank"><i class="fa fa-facebook-f"></i></a>
-                            <a href="https://twitter.com/home?lang=en"><i class="fa fa-twitter" target="_blank"></i></a>
-                            <a href="https://www.youtube.com/channel/UCAyFVX_1KPQl3NKF_GtM0YQ" target="_blank"><i class="fa fa-youtube"></i></a>
-                            <a href="https://www.instagram.com/nads_bgm/" target="_blank"><i class="fa fa-instagram"></i></a>
-                        </div>
-                        
-                    </div>
-                 </div>
-
-                <div class="column right">
-                    <div class="text">Message me</div>
-                    <form action="https://formspree.io/f/xeqvkvvw" method="POST">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" id="name" name="name" placeholder="Name" required>   
-                            </div>
-                            <div class="field email">
-                                <input type="email" id="email" name="email" placeholder ="Email" required>   
-                            </div>
-                         </div>
-                         <div class="field">
-                            <input type="number" id="Phone" name="Phone" placeholder="Phone" required>
-                        </div>
-                        <div class="field textarea">
-                           <textarea cols="30" rows="10" placeholder="message..." id="message" name="message"required></textarea>
-                        </div>
-                        <div class="button">
-                            <button type="submit"> Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <div class="vline"></div>
  <!-- footer section starts -->
         <footer>
@@ -327,6 +276,34 @@
 
 
 <!-- script section starts -->
-         <script src="script.js"></script> 
+        <script>
+
+         paceOptions = {
+         ajax: true,
+        document: true,
+         eventLag: false
+        };
+
+        Pace.on('done', function() {
+         $('.p').delay(500).animate({top: '30%', opacity: '0'}, 2000, $.bez([0.19,1,0.22,1]));
+
+
+        $('#preloader').delay(500).animate({top: '-100%'}, 3000, $.bez([0.19,1,0.22,1]));
+
+        TweenMax.from(".title", 2, {
+         delay: 1.8,
+              y: 10,
+              opacity: 0,
+              ease: Expo.easeInOut
+        })
+   });
+
+  </script>
+         <!-- <script>
+            $(window).on("load",function(){
+                $(".loader-container").fadeOut(1000);
+            });
+        </script> -->
+        <script src="script.js"></script> 
 </body>
 </html>
