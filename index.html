@@ -14,22 +14,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <!-- <script src="pace.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+  
     
     
 </head>
 <body>
- <!-- loader section  -->
-
-    <!-- <div id="preloader">
-        <div class="p">LOADING</div>
-    </div> -->
-
-    <!-- <div class="loader-container">
-        <div class="loader"></div>
-    </div> -->
+    <!-- loader section  -->
+    <div class="preloader">
+        <div class="loading">
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+      </div>
+    </div>
+    <!-- loader section Ends -->
 
     <div class="scroll-up-btn">
         <i class="fa fa-angle-up"></i>
@@ -91,7 +94,7 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="img/profile.JPG" alt="">
+                    <img src="img/profile2.JPG" alt="">
                 </div>
             <div class="column right">
                 <div class="text">I'm Nawshadh and I'm a <span class="typing2"></span></div>
@@ -126,7 +129,7 @@
                     <div class="card">
                         <div class="box">
                             <i class="fa fa-desktop" aria-hidden="true"></i> 
-                            <div class="text">UI Designer</div>
+                            <div class="text">UI Design</div>
                             <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quibusdam beatae cumque inventore repudiandae est.</p> -->
                         </div>
                     </div>
@@ -276,34 +279,27 @@
 
 
 <!-- script section starts -->
+  
+
+
+<script>
+    $(window).on("load",function(){
+          $(".preloader").delay(1500);
+          $(".preloader").fadeOut(1000);  
+      });
+   </script>
+   
         <!-- <script>
+         let preloader = document.querySelector('.preloader');
 
-         paceOptions = {
-         ajax: true,
-        document: true,
-         eventLag: false
-        };
+         window.addEventListener('load', function() {
+             preloader.style.display = 'none';
 
-        Pace.on('done', function() {
-         $('.p').delay(500).animate({top: '30%', opacity: '0'}, 2000, $.bez([0.19,1,0.22,1]));
+         });
+         </script> -->
+       
 
 
-        $('#preloader').delay(500).animate({top: '-100%'}, 3000, $.bez([0.19,1,0.22,1]));
-
-        TweenMax.from(".title", 2, {
-         delay: 1.8,
-              y: 10,
-              opacity:0,
-              ease: Expo.easeInOut
-        })
-   });
-
-  </script> -->
-         <!-- <script>
-            $(window).on("load",function(){
-                $(".loader-container").fadeOut(1000);
-            });
-        </script> -->
         <script src="script.js"></script> 
 </body>
 </html>

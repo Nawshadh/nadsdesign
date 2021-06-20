@@ -20,64 +20,65 @@ html{
 
 
 /* loader styling */
-
-.pace {
-    pointer-events: none;
-    user-select: none;
-    z-index: 999;
+.preloader{
     position: fixed;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 300px;
-    border: 0px;
-    height: 1px;
-    overflow: hidden;
-    background:#a50909;
-  }
-  
-  .pace .pace-progress {
-    box-sizing: border-box;
-    transform: translate3d(0, 0, 0);
-    max-width: 300px;
-    position: fixed;
-    z-index: 99;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    height: 100%;
+    z-index: 9999;
+    background: #111;
     width: 100%;
-    background:#008ab4;
+    height: 100%;
+}
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 10px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .obj{
+    width: 8px;
+    height: 10px;
+    background: white;
+    margin: 0 2px;
+    border-radius: 10px;
+    animation: loading 0.8s infinite;
+  }
+  .obj:nth-child(2){
+    animation-delay: 0.1s;
+  }
+  .obj:nth-child(3){
+    animation-delay: 0.2s;
+  }
+  .obj:nth-child(4){
+    animation-delay: 0.3s;
+  }
+  .obj:nth-child(5){
+    animation-delay: 0.4s;
+  }
+  .obj:nth-child(6){
+    animation-delay: 0.5s;
+  }
+  .obj:nth-child(7){
+    animation-delay: 0.6s;
+  }
+  .obj:nth-child(8){
+    animation-delay: 0.7s;
   }
   
-  .pace.pace-inactive {
-    display: none;
-  }
   
-  #preloader{
-    z-index:1;
-    width:100%;
-    height:100vh;
-    background:#111;
-    overflow:unset;
-    position:fixed;
-    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  @keyframes loading {
+    0%{
+      height: 0;
+    }
+    50%{
+      height: 40px;
+    }
+    100%{
+      height: 0;
+    }
   }
- 
-  
-  .p {
-      font-size: 30px;
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
-  }
-
 
 /* loader ends */
 
@@ -347,6 +348,7 @@ justify-content: space-between;
 .about .about-content .left img{
     height: 400px;
     width: 400px;
+    transform: scalex(-1);
     object-fit: cover;
     border-radius: 6PX;
     
